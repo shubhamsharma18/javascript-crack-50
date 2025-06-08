@@ -5,3 +5,17 @@ This repository, **javascript-crack-50**, contains my personal solutions and exp
 Each question is organized in its own file with clean code, comments, and where needed, real-world explanations.
 
 Perfect for developers, job seekers, and students aiming to build a strong JavaScript foundation.
+
+🧠 Why This Repo?
+Build a rock-solid JS foundation
+
+Improve problem-solving skills
+
+Prepare for frontend & full-stack interviews
+
+Practice daily with clear progression
+
+
+📌 Author
+Shubham Sharma
+💼 Aspiring JavaScript Developer | 🎯 On a mission to master JavaScript
