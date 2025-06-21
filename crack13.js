@@ -17,17 +17,22 @@ console.log(Result);
 // second method
 
 
-let array=[1,9,9]
+let array=[1,9,9,'89']
 function check(){
        let isNumber=true;
     array.forEach(element => {
  
     if(typeof element !=='number'){
-       isempty=false;
+       isNumber=false
+       return isNumber
+    }
+    else{
+      isNumber=true
     }
     
+    
     });
-    return isNumber
+  return isNumber
 }
 
 let result=check(array)
