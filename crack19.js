@@ -1,19 +1,10 @@
 // Create a function that reverse each word of given sentence like " mai hu shubh" -> "iam uh hbuhs"
-function reverseword(sentence)
-{
-    let str=''
-for(let i=0;i<=sentence.length;i++){
-    
-    if(sentence[i] != " "){
-        str+=sentence[i]
-    }
-    else{
-        for(let i=str.length;i<=0;i++){
-            str=str[i]
-    }
-}
-    
-return str
-}
-let sentence1 = reverseword("mai hu shubh")
-console.log(sentence1)
+let sentence="the finisher benstokes"
+let result= sentence.split(' ').map((element)=>{
+    let reverseword= element.split('').reverse().join('')
+    return reverseword
+}).join(' ')
+
+console.log(result);
+
+
