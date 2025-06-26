@@ -8,7 +8,7 @@ function returnarrelement(arr, n) {
     
     else if (n < arr.length) {
         let result = arr.slice(0, n)
-        console.log(result);
+       return result
         
         
     }
@@ -19,5 +19,8 @@ function returnarrelement(arr, n) {
     
 }
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ let finalresult=
  returnarrelement(arr,7)
+ console.log(finalresult);
+ 
 
