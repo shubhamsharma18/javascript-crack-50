@@ -13,6 +13,7 @@ arr.forEach((word) => {
     }
     
 });
+console.log(obj);
 
  
 let arr1= Object.entries(obj)
