@@ -1,0 +1,99 @@
+<!-- How would you handle form validaiton and show real time error dynamically-->
+ <!-- Update the  DOM based on the user input live preview-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form{
+        padding:10px;
+        margin: 10px 0px 0 10px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    span{
+        color: red;
+        padding-left:5px;
+    }
+</style>
+
+<body>
+
+    <form>
+    <div class="name">
+        <label for="usertext">Name</label>
+        <input id="usertext" type="text" placeholder="Enter your name"><span class="texterror"></span>
+    </div>
+
+
+    <div class="email">
+        <label for="usermail">E-mail</label>
+        <input id="usermail" type="text" placeholder="Enter your e-mail"><span class="emailerror"></span>
+    </div>
+
+      <div class="passwowrd">
+        <label for="upassword">Password</label>
+        <input id="upassword" type="password" placeholder="Enter your e-mail"><span class="passerror"></span>
+    </div>
+
+
+</form>
+
+    <script>
+
+
+       let userfield = document.querySelector('#usertext')
+        let email = document.querySelector('#usermail')
+        let upassword=document.querySelector('#upassword')
+        let texterror=document.querySelector('.texterror')
+        let passerror=document.querySelector('.passerror')
+        let emailerror=document.querySelector('.emailerror')
+
+        userfield.addEventListener('input', function (e) {
+            let user= e.target.value
+            if(user.length<3){
+                texterror.innerHTML='Characters must be atleast 3'
+            }
+            else{
+                 texterror.innerHTML=""
+
+            }
+
+        });
+        email.addEventListener('input', function (e) {
+            let email=e.target.value
+            if(!email.includes('@')|| !email.includes('.')){
+          emailerror.innerHTML='invalid email'
+            }
+else{
+    emailerror.innerHTML=""
+}
+        });
+
+ upassword.addEventListener('input', function (e) {
+            
+ let password= e.target.value
+
+ 
+            if(password.length<6){
+                passerror.innerHTML='password must be atleast 6'
+            }
+            else{
+                 passerror.innerHTML=''
+            }
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
