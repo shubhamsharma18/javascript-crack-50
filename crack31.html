@@ -1,0 +1,45 @@
+<!--How do you find the closest ancestors element that matches a selector-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+     <style>
+    #grandparent{
+        padding:20px;
+        background-color: brown;
+    }
+    #parent{
+        padding:10px;
+        background-color: blue;
+    }
+    .child{
+        padding:5px;
+        background-color: rgb(226, 214, 43);
+    }
+</style>
+<body>
+  
+
+    <div class="parent" id="grandparent">
+        Grand Parent
+        <div class="parent" id="parent">
+            Parent
+             <div class="child">
+            Child
+        </div>
+        </div>
+       
+    </div>
+    <script>
+
+        let child=document.querySelector('.child')
+        child.addEventListener('click',(e)=>{
+console.log(e.target.closest('.parent'))
+
+        })
+    </script>>
+</html>
