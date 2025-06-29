@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .toggle{
+       
+    }
+  
+    li{
+        list-style: none;
+        margin-bottom:0px;
+        padding:20px 0px;
+        border-top: 0.1px solid rgb(119, 119, 119);
+border-bottom: 0.1px solid rgb(119, 119, 119);
+
+        width: 100%;
+    }
+li:hover{
+    background-color: rgb(212, 171, 117);
+}
+    .side{
+      
+           height:100vh;
+        background-color: antiquewhite;
+        width:15rem;
+       
+        position: fixed;
+        right:0;
+        top:0;
+        text-align: center;
+        transform: translateX(100%);
+        transition: all ease-in-out 0.3s;
+      
+       
+    }
+      .sidebar{
+       
+        transform: translateX(0%);
+    }
+</style>
+<body>
+    <div class="main">
+    <div class="toggle">
+        <button>Toggle</button>
+    </div>
+    <div class= "side">
+     <li>Home</li>
+      <li>About</li>
+        <li>Courses</li>
+         <li>Help</li>
+    </div>
+    </div>
+
+    <script>
+        let btn=document.querySelector('button')
+let show=document.querySelector('.side')
+console.log(btn,show);
+
+        btn.addEventListener('click',(e)=>{
+show.classList.toggle('sidebar');
+console.log(show);
+
+
+        })
+    </script>
+</body>
+</html>
